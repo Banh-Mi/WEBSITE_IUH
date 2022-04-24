@@ -2,12 +2,13 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  line-height: 1.5;
+  box-sizing: border-box;
+  line-height: 1.8vw;
   text-decoration: none;
 }
 
 body {
+  background-color: #12122D;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -15,12 +16,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #12122D !important;
-  font-family: Round;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
 }
 
 @font-face {
@@ -28,66 +30,60 @@ body {
   src: url(../fonts/VarelaRound-Regular.ttf);
 }
 
-.header {
-  padding: 0px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: Round;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  padding-top: 1rem;
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
-}
-
-.header .image {
-  border-radius: 50%;
-  padding: 6px;
-  background-color: white;
-}
-
-.header .share {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.25rem;
-  margin-left: auto;
-  margin-right: 3rem;
-}
-
-.header .download {
-  border: 2px solid #11D1CD;
-  border-radius: 50px;
-  padding: 10px 25px;
-  background-color: #12122D;
-  color: #11D1CD;
-  font-size: 1.25rem;
-}
-
-.download:hover {
-  background-color: #11D1CD;
-  color: white;
-}
-
 .main {
   width: 100vw;
-  padding: 0px 15px;
+  max-width: 95%;
   font-family: Round;
-  margin-top: 5px;
-  color: white;
 }
 
-.main .line {
+.main .header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 45px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  font-size: 1.6vw;
+  margin: 5px 10px;
+}
+
+.main .header .image {
+  width: 6.5vw;
+  max-width: 100%;
+  padding: 6.5px;
+  background-color: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+}
+
+.main .header .title {
+  color: #fff;
+  font-size: 5vw;
+  font-weight: 600;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main .header .share {
+  background-color: rgba(0, 255, 255, 0.856);
+  color: #fff;
+  padding: 1vw 2vw;
+  border: none;
+  font-size: 2.5vw;
+  border-radius: 3vw;
+  border: 2px solid rgba(0, 255, 255, 0.856);
+}
+
+.main .header .share:hover {
+  background-color: #12122D;
+  color: rgba(0, 255, 255, 0.856);
+}
+
+.main .body {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -95,37 +91,34 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.picture {
-  padding: 10px 0px;
-  max-width: 100%;
-}
 
-.col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
-}
-
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+.main .body .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 2.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
-.row .center {
-  margin-right: 5rem;
-  margin-left: 5rem;
-}
-
-.card-footer {
-  background-color: #635f92a0;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0px;
+.main .body .row-cols > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 33.33333333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card {
@@ -138,15 +131,71 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 0;
-  word-wrap: break-word;
+  width: 25vw;
+  max-width: 100%;
   background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.1rem;
+  border-radius: 0.25rem;
+  margin: 2vw 0vw;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: gray;
+  text-decoration: none;
+}
+
+.card .card-footer {
+  padding: 0.7rem 1rem;
+  background-color: rgba(157, 157, 157, 0.558);
+  font-size: 1.5vw;
+  width: 100%;
+  text-align: center;
+  color: #6c757d;
   font-family: Round;
+}
+
+.card .card-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+img {
+  width: 20vw;
   max-width: 100%;
 }
-.logo{
-  max-width:100%;
+
+@media only screen and (max-width: 992px) {
+  .main .body .row-cols > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 50%;
+  }
+  .main .body .row {
+    padding: 0px;
+  }
+  .main .header .image {
+    width: 12vw;
+  }
+  .main .header .title {
+    font-size: 7.5vw;
+  }
+  .main .header .share {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+  }
+  .card {
+    margin: 10px 0px;
+    width: 40vw;
+  }
+  .card .card-footer {
+    font-size: 2.8vw;
+    padding: 2.1vw 1rem;
+  }
+  img {
+    width: 40vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
