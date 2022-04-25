@@ -113,15 +113,6 @@ body {
   font-size: calc(20px + 5%);
 }
 
-.card:hover > .card-footer {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  height: 300%;
-  background-color: rgba(0, 255, 255, 0.856);
-  font-size: calc(50px + 5%);
-  color: rgba(14, 15, 15, 0.997);
-}
-
 .card img {
   width: 100%;
   position: absolute;
@@ -131,12 +122,16 @@ body {
   .card {
     margin: 10px 0px;
   }
+}
+
+@media only screen and (min-width: 840px) {
   .card:hover > .card-footer {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    height: 300%;
     background-color: rgba(0, 255, 255, 0.856);
-    font-size: calc(20px + 5%);
-    height: 40px;
+    font-size: calc(50px + 5%);
+    color: rgba(14, 15, 15, 0.997);
   }
 }
 /*# sourceMappingURL=style.css.map */
