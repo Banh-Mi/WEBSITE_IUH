@@ -131,5 +131,12 @@ body {
   .card {
     margin: 10px 0px;
   }
+  .card:hover > .card-footer {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: rgba(0, 255, 255, 0.856);
+    font-size: calc(20px + 5%);
+    height: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
