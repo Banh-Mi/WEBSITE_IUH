@@ -22,6 +22,7 @@ body {
 
 .main {
   font-family: Round;
+  margin: 2vw 0px;
 }
 
 .main .header {
@@ -36,7 +37,7 @@ body {
 }
 
 .main .header .image {
-  width: calc(50px + 5vw);
+  width: calc(25px + 4.8vw);
   padding: 6.5px;
   max-width: 100%;
   background-color: #fff;
@@ -46,7 +47,7 @@ body {
 
 .main .header .title {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: calc(16px + 3vw);
   font-weight: 600;
   margin-right: auto;
   margin-left: auto;
@@ -55,15 +56,11 @@ body {
 .main .header .share {
   background-color: rgba(0, 255, 255, 0.856);
   color: #fff;
-  padding: 5px 20px;
-  border: none;
+  padding: 5px;
   border-radius: 55px;
   border: 2px solid rgba(0, 255, 255, 0.856);
-}
-
-.main .header .share:hover {
-  background-color: #12122D;
-  color: rgba(0, 255, 255, 0.856);
+  width: calc(30px + 4vw);
+  height: calc(30px + 4vw);
 }
 
 .card {
@@ -99,8 +96,7 @@ body {
   color: #000;
   font-family: Round;
   z-index: 2;
-  font-size: calc(20px + 5%);
-  background-color: #ffb700;
+  font-size: 0px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,10 +109,17 @@ body {
           align-items: center;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  background-color: rgba(0, 255, 255, 0.856);
+  font-size: calc(20px + 5%);
 }
 
-.card-footer:last-child {
-  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+.card:hover > .card-footer {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  height: 300%;
+  background-color: rgba(0, 255, 255, 0.856);
+  font-size: calc(50px + 5%);
+  color: rgba(14, 15, 15, 0.997);
 }
 
 .card img {
@@ -124,7 +127,7 @@ body {
   position: absolute;
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 400px) {
   .card {
     margin: 10px 0px;
   }
