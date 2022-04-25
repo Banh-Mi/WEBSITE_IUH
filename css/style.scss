@@ -3,8 +3,8 @@
 	padding: 0px;
 	-webkit-box-sizing: border-box;
 			box-sizing: border-box;
-	line-height: 1.8vw;
-	text-decoration: none; 
+	text-decoration: none;
+	font-size: 14px;
 }
 body {
 	background-color: #12122D;
@@ -12,26 +12,13 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-		-ms-flex-pack: center;
-			justify-content: center;
-	-webkit-box-align: center;
-		-ms-flex-align: center;
-			align-items: center;
-	height: 100vh;
-  }
+}
   
 @font-face {
 	font-family: Round;
 	src: url(../fonts/VarelaRound-Regular.ttf);
 }
 .main {
-	margin-top: 2vw;
-	width: 100vw;
-	max-width: 95%;
 	font-family: Round;
 	.header {
 		-webkit-box-align: center;
@@ -43,15 +30,16 @@ body {
 		font-size: 1.6vw;
 		margin:0px 10px;
 		.image {
-			width: 6.5vw;
+			width: calc(50px + 5vw);
 			padding: 6.5px;
+			max-width: 100%;
 			background-color: #fff;
 			border: 1.5px solid #fff;
 			border-radius: 50%;
 		}
 		.title {
 			color: #fff;
-			font-size: 3.5vw;
+			font-size: 1.5rem;
 			font-weight: 600;
 			margin-right: auto;
   			margin-left: auto;
@@ -69,72 +57,47 @@ body {
 			color:rgba(0, 255, 255, 0.856);
 		}
 	}
-	.body {
-		color: #fff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		.row {
-			display: flex;
-			flex-wrap: wrap;
-			margin-top: 2.5rem;
-			margin-right: 0.5rem;
-			margin-left: 0.5rem;
-			padding-right: 3rem;
-			padding-left: 3rem;
-		  }
-		.row-cols > * {
-			flex: 0 0 auto;
-			width: 33.33333333%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-	}
 }
 .card {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-width: 0;
-	width:25vw;
-	max-width: 100%;
 	background-color: #fff;
 	border-radius: 0.25rem;
 	margin: 18px 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: gray;
+	color: #fff;
 	text-decoration: none;
-	.card-footer {
-		padding: 0.3rem 1rem;
-		background-color: rgba(157, 157, 157, 0.558);
-		font-size: 1.2vw;
-		width: 100%;
-		text-align: center;
-		color: #6c757d;
-		font-family: Round;
-	}
-	.card-footer:last-child {
-		border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
-	}
-	
-  
+	height: 200px;
+	overflow: hidden;
 }
-img {
-	width: 20vw;
-	max-width: 100%;
+.card-footer {
+	padding: 0.5rem 1rem;
+	width: 300%;
+	text-align: center;
+	color: #000;
+	font-family: Round;
+	z-index: 2;
+	font-size: calc(20px + 5%);
+	background-color: #ffb700;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(-45deg);
+}
+.card-footer:last-child {
+	border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+.card img {
+	width: 100%;
+	position: absolute;
+
 }
 @media only screen and (max-width:380px) {
-	.main {
-		.body {
-			.row-cols > * {
-				flex: 0 0 auto;
-				width: 50%;
-			}
-		}
-	}
 	.card{
 		margin:10px 0px;
 	}

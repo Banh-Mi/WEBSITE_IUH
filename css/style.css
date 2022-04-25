@@ -3,8 +3,8 @@
   padding: 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  line-height: 1.8vw;
   text-decoration: none;
+  font-size: 14px;
 }
 
 body {
@@ -21,8 +21,6 @@ body {
 }
 
 .main {
-  width: 100vw;
-  max-width: 95%;
   font-family: Round;
 }
 
@@ -34,13 +32,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6vw;
-  margin: 5px 10px;
+  margin: 0px 10px;
 }
 
 .main .header .image {
-  width: 6.5vw;
-  max-width: 100%;
+  width: calc(50px + 5vw);
   padding: 6.5px;
+  max-width: 100%;
   background-color: #fff;
   border: 1.5px solid #fff;
   border-radius: 50%;
@@ -48,7 +46,7 @@ body {
 
 .main .header .title {
   color: #fff;
-  font-size: 5vw;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-right: auto;
   margin-left: auto;
@@ -57,58 +55,15 @@ body {
 .main .header .share {
   background-color: rgba(0, 255, 255, 0.856);
   color: #fff;
-  padding: 1vw 2vw;
+  padding: 5px 20px;
   border: none;
-  font-size: 2.5vw;
-  border-radius: 3vw;
+  border-radius: 55px;
   border: 2px solid rgba(0, 255, 255, 0.856);
 }
 
 .main .header .share:hover {
   background-color: #12122D;
   color: rgba(0, 255, 255, 0.856);
-}
-
-.main .body {
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main .body .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 2.5rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
-}
-
-.main .body .row-cols > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: 33.33333333%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .card {
@@ -121,11 +76,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 0;
-  width: 25vw;
-  max-width: 100%;
   background-color: #fff;
   border-radius: 0.25rem;
-  margin: 2vw 0vw;
+  margin: 18px 0px;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -133,59 +86,47 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: gray;
+  color: #fff;
   text-decoration: none;
+  height: 200px;
+  overflow: hidden;
 }
 
-.card .card-footer {
-  padding: 0.7rem 1rem;
-  background-color: rgba(157, 157, 157, 0.558);
-  font-size: 1.5vw;
-  width: 100%;
+.card-footer {
+  padding: 0.5rem 1rem;
+  width: 300%;
   text-align: center;
-  color: #6c757d;
+  color: #000;
   font-family: Round;
+  z-index: 2;
+  font-size: calc(20px + 5%);
+  background-color: #ffb700;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
-.card .card-footer:last-child {
+.card-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 
-img {
-  width: 20vw;
-  max-width: 100%;
+.card img {
+  width: 100%;
+  position: absolute;
 }
 
-@media only screen and (max-width: 992px) {
-  .main .body .row-cols > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 50%;
-  }
-  .main .body .row {
-    padding: 0px;
-  }
-  .main .header .image {
-    width: 12vw;
-  }
-  .main .header .title {
-    font-size: 7.5vw;
-  }
-  .main .header .share {
-    font-size: 4vw;
-    padding: 2vw 4vw;
-  }
+@media only screen and (max-width: 380px) {
   .card {
     margin: 10px 0px;
-    width: 40vw;
-  }
-  .card .card-footer {
-    font-size: 2.8vw;
-    padding: 2.1vw 1rem;
-  }
-  img {
-    width: 40vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
